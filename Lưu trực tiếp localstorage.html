@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Storage</title>
+</head>
+<body>
+    <h1>HTML Storage</h1>
+    <script type="text/javascript">
+        if (typeof(Storage) !== 'undefined') {
+            // Nếu trình duyệt hỗ trợ Web Storage
+            localStorage.setItem('name', 'Huy');
+            localStorage.age = '18';
+            localStorage['gender'] = 'Male';
+            var data = localStorage.length;
+            console.log(data);
+            var name = localStorage.getItem('name');
+            console.log('Name: ' + name);
+            console.log('Age: ' + localStorage.getItem('age'));
+            console.log('Gender: ' + localStorage.getItem('gender'));
+        } else {
+            // Nếu không hỗ trợ
+            alert('Trình duyệt của bạn không hỗ trợ Storage');
+        }
+
+    </script>
+</body>
+</html> 
